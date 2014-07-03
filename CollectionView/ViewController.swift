@@ -16,11 +16,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        imagesArray += "Swift"
-        imagesArray += "is"
-        imagesArray += "the"
-        imagesArray += "next"
-        imagesArray += "hotness"
+        for i in 1..100 {
+         imagesArray += "Test \(i)"
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +41,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         label.text = imagesArray[indexPath.row]
         cell.layer.borderWidth = 2.0
         cell.layer.borderColor = UIColor.whiteColor().CGColor
-        cell.layer.cornerRadius = 50.0
+        cell.layer.cornerRadius = 10.0
         
         return cell
     }
